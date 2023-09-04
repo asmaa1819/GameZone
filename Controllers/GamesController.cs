@@ -3,11 +3,19 @@ namespace GameZone.Controllers;
 
  public class GamesController : Controller
  {
-    private readonly ApplicationDbContext _context;
+    
+    private readonly ICategoriesServices _categoriesServices;
+    private readonly IDevicesService _devicesServices;
+    private readonly IGamesService _gameServices;
 
-    public GamesController(ApplicationDbContext context)
+
+
+    public GamesController(ICategoriesServices categoriesServices, IDevicesService devicesServices, IGamesService gameServices)
     {
-        _context = context;
+
+        _categoriesServices = categoriesServices;
+        _devicesServices = devicesServices;
+        _gameServices = gameServices;
     }
 
     public IActionResult Index()
@@ -15,26 +23,35 @@ namespace GameZone.Controllers;
             return View();
         }
 
-        public IActionResult Create()
-        {
+    public IActionResult Create()
+    {
 
 
         CreateGameFormViewModel viewModel = new()
         {
-            Categories = _context.Categories
-            .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
-            .OrderBy(c=>c.Text)
-            .ToList(),
-
-            Devices = _context.Devices
-            .Select(d => new SelectListItem { Value = d.Id.ToString(), Text = d.Name })
-            .OrderBy(d => d.Text)
-            .ToList()
+            Categories = _categoriesServices.GetSelectLists(),
+            Devices = _devicesServices.GetSelectLists()
         };
 
         
 
             return View(viewModel);
+    }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(CreateGameFormViewModel model)
+    {
+        if (!ModelState.IsValid)
+        {
+            model.Categories = _categoriesServices.GetSelectLists();
+            model.Devices = _devicesServices.GetSelectLists();
+            return View(model);
         }
+        await _gameServices.Create(model);
+
+        return RedirectToAction(nameof(Index)) ;
+
+    }
+
  }
 

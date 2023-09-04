@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\GameZone.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\connect\\source\\repos\\GameZone\\GameZone\\wwwroot\\assect\\images\\games\\f1fbd123-70e5-4c66-8dad-de312758e67b.png",
+      "PackagePath": "staticwebassets\\assect\\images\\games\\f1fbd123-70e5-4c66-8dad-de312758e67b.png"
+    },
+    {
       "Id": "C:\\Users\\connect\\source\\repos\\GameZone\\GameZone\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },

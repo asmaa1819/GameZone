@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Yv5xCJD3mja29a9mT3RIlGWVbT8FUvaR98Y9L7u7KU0=",
+  "Hash": "4rqkrzf/WoRQ3LdAVO9PFP3YOhHkzrTY4juTOHb7SUY=",
   "Source": "GameZone",
   "BasePath": "_content/GameZone",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\connect\\source\\repos\\GameZone\\GameZone\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\GameZone.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\connect\\source\\repos\\GameZone\\GameZone\\wwwroot\\assect\\images\\games\\f1fbd123-70e5-4c66-8dad-de312758e67b.png",
+      "SourceId": "GameZone",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\connect\\source\\repos\\GameZone\\GameZone\\wwwroot\\",
+      "BasePath": "_content/GameZone",
+      "RelativePath": "assect/images/games/f1fbd123-70e5-4c66-8dad-de312758e67b.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assect\\images\\games\\f1fbd123-70e5-4c66-8dad-de312758e67b.png"
     },
     {
       "Identity": "C:\\Users\\connect\\source\\repos\\GameZone\\GameZone\\wwwroot\\css\\bootstrap.min.css",

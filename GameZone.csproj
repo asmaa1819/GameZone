@@ -8,16 +8,12 @@
 
   <ItemGroup>
     <Compile Remove="NewFolder1\**" />
-    <Compile Remove="NewFolder\**" />
     <Compile Remove="Views\GamesController1\**" />
     <Content Remove="NewFolder1\**" />
-    <Content Remove="NewFolder\**" />
     <Content Remove="Views\GamesController1\**" />
     <EmbeddedResource Remove="NewFolder1\**" />
-    <EmbeddedResource Remove="NewFolder\**" />
     <EmbeddedResource Remove="Views\GamesController1\**" />
     <None Remove="NewFolder1\**" />
-    <None Remove="NewFolder\**" />
     <None Remove="Views\GamesController1\**" />
   </ItemGroup>
 
@@ -28,6 +24,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assect\images\games\" />
   </ItemGroup>
 
 </Project>
