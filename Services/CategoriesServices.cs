@@ -10,7 +10,7 @@ namespace GameZone.Services
         {
             _context = context;
         }
-        IEnumerable<SelectListItem> ICategoriesServices.GetSelectLists()
+        public IEnumerable<SelectListItem> GetSelectLists()
         {
             return _context.Categories
             .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
